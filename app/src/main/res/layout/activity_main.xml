@@ -6,20 +6,32 @@
     android:layout_height="match_parent"
     tools:context="com.deepindex.ballbang.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/base_launcher"
-        android:contentDescription="@string/back_ground"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="127dp" />
+    <RelativeLayout
 
-    <TextView
-        android:id="@+id/value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="61dp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.deepindex.ballbang.view.BigBallView
+            android:id="@+id/ballview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true" />
+
+        <com.deepindex.ballbang.view.SmallBallView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="150dp"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/begin"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/begin"
+            android:visibility="visible" />
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
